@@ -11,17 +11,28 @@
     <header>
         <h1>Obscure Cat Facts Quiz</h1>
         <ul>
-            <li>0%</li>
-            <li>0/7 Correct</li>
+            <li class="score-percent">0%</li>
+            <li class="score-fraction">0/7 Correct</li>
         </ul>
     </header>
     <main>
         <section class="quizbox">
-            <fieldset>
-                <legend>Let's test your knowledge of obscure cat facts.</legend>
-            </fieldset>
-            <button type="button">Begin</button>
+            <h1>Let's test your knowledge of obscure cat facts.</h1>
+            <form id="quiz-form">
+                <fieldset class="q-and-a">
+                    <legend class="question"></legend>
+                    <section class="just-answers"></section>
+                    <secion class="final-message"></secion>
+                </fieldset>
+                <button type="button" id="button" class="button begin">Begin</button>
+                <button type="submit" id="submit" class="button submit">Submit</button>
+                <button type="button" id="next" class="button next">Next</button>
+                <button type="button" id="again" class="button again">Begin Again</button>
+            </form>
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="store.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
