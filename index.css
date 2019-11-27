@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     background-image: url(images/manja-vitolic-cat.jpg);
     background-size: cover;
     background-position: top center;
@@ -21,9 +21,10 @@ header {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid white;
+    border: 1px solid #f9f9f9;
     border-radius: 7px;
     color: #f9f9f9;
+    background-color: rgba(40, 40, 40, .40);
 }
 
 .quizbox {
@@ -38,16 +39,41 @@ header {
     border-radius: 7px;
 }
 
-.quizbox button {
+.button {
     position: absolute;
     left: 50%;
-    margin-left: -50%;
-    bottom: 50px;
+    margin-left: -55px;
+    bottom: 65px;
     width: 110px;
     height: 55px;
     border-radius: 7px;
+    border: none;
+    color: rgb(43, 43, 43);
+    background-color: rgb(214, 214, 214);
     text-transform: uppercase;
     font-size: 18px;
+    font-weight: bold;
+}
+
+.button:hover {
+    border: 1.5px solid rgb(126, 126, 126);
+}
+
+.question, .just-answers {
+    text-align: left;
+}
+
+.just-answers {
+    margin-top: 5px;
+}
+
+.just-answers h2 {
+    text-align: center;
+}
+
+.final-message {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 header ul {
@@ -56,6 +82,8 @@ header ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: Verdana;
+    font-weight: bold;
 }
 
 .submit,.next,.again{
@@ -77,5 +105,38 @@ fieldset legend {
 
 .question {
     font-size: 18px;
+}
+
+@media only screen and (max-width: 450px) {
+  
+    main {
+        padding: 10px;
+    }
+
+    header {
+        width: 75%;
+        margin-top: 55px;
+    }  
+
+    .quizbox {
+        width: 75%;
+        padding: 15px;
+    }
+
+    .question {
+        font-size: 90%;
+    }
+
+    .just-answers {
+        font-size: 90%;
+    }
+
+    .begin {
+        bottom: 175px;
+    }
+
+    .submit, .next {
+        bottom: 35px;
+    }
 }
 
